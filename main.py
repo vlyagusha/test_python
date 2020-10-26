@@ -1,6 +1,12 @@
 import fib
 import rects
+import logging
 
-print(fib.fib_list(14))
-print(fib.fib(9))
-print(rects.square(3, 4))
+logging.basicConfig(
+    format='%(filename)s[LINE:%(lineno)d]# \
+    %(levelname)-8s [%(asctime)s] %(message)s',
+    level=logging.INFO
+)
+
+logging.info('Entered fails')
+logging.error('Working')
